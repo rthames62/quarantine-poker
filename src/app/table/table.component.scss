@@ -1,0 +1,16 @@
+.poker-table {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    width: 1200px;
+    position: relative;
+
+    &> img {
+      width: 100%;
+    }
+  }
+}

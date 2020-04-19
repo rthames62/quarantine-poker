@@ -1,0 +1,22 @@
+<div class="seat"
+  (click)="reserveSeat()"
+  [class.current-action]="seat.currentAction"
+  [ngClass]="'seat-' + seat.position">
+  <ng-container *ngIf="seat.uuid">
+    <p class="name">{{ seat.name }}</p>
+    <p class="chip-count">{{ seat.chipCount | number }}</p>
+  </ng-container>
+  <div *ngIf="seat.playing && seat.cards.length" class="hand" [ngClass]="'seat-' + seat.position">
+      <qp-card [seat]="seat" [gameState]="gameState$ | async"></qp-card>
+  </div>
+  <ng-container *ngIf="(gameState$ | async) as gameState">
+    <div *ngIf="gameState.active && (seat.dealer || seat.sb || seat.bb)" class="buttons">
+      <div *ngIf="seat.dealer" class="dealer">Dealer</div>
+      <div *ngIf="seat.sb" class="sb">SB</div>
+      <div *ngIf="seat.bb" class="bb">BB</div>
+    </div>
+  </ng-container>
+  <div *ngIf="seat.prePotChipAmount > 0" class="prepot-amount">
+    {{ seat.prePotChipAmount }}
+  </div>
+</div>

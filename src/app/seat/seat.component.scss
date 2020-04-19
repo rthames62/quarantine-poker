@@ -1,0 +1,164 @@
+.seat {
+  width: 120px;
+  height: 120px;
+  background: black;
+  border: 2px solid greenyellow;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &> .name {
+    font-size: 22px;
+    font-weight: bold;
+    color: greenyellow;
+    margin-bottom: 5px;
+  }
+
+  &.current-action {
+    border: 8px solid yellow;
+  }
+
+  &> .chip-count {
+    color: white;;
+  }
+
+  &.seat-1 {
+    top: -30px;
+    right: 320px;
+  }
+
+  &.seat-2 {
+    top: 70px;
+    right: 50px;
+  }
+
+  &.seat-3 {
+    top: 330px;
+    right: -70px;
+  }
+
+  &.seat-4 {
+    top: 590px;
+    right: 60px;
+  }
+
+  &.seat-5 {
+    top: 690px;
+    right: 360px;
+  }
+
+  &.seat-6 {
+    top: 690px;
+    left: 360px;
+  }
+
+  &.seat-7 {
+    top: 590px;
+    left: 60px;
+  }
+
+  &.seat-8 {
+    top: 330px;
+    left: -70px;
+  }
+
+  &.seat-9 {
+    top: 70px;
+    left: 50px;
+  }
+
+  &.seat-10 {
+    top: -30px;
+    left: 320px;
+  }
+}
+
+.hand {
+  position: absolute;
+
+  &.seat-1 {
+    top: 170px;
+    right: 110px;
+  }
+
+  &.seat-2 {
+    top: 130px;
+    right: 200px;
+  }
+
+  &.seat-3 {
+    top: 20px;
+    right: 260px;
+  }
+
+  &.seat-4 {
+    bottom: 200px;
+    right: 200px;
+  }
+
+  &.seat-5 {
+    bottom: 250px;
+    right: 100px;
+  }
+
+  &.seat-6 {
+    bottom: 250px;
+    left: 20px;
+  }
+
+  &.seat-7 {
+    bottom: 190px;
+    left: 120px;
+  }
+
+  &.seat-8 {
+    top: 20px;
+    left: 180px;
+  }
+
+  &.seat-9 {
+    top: 130px;
+    left: 110px;
+  }
+
+  &.seat-10 {
+    top: 180px;
+    left: 30px;
+  }
+}
+
+.buttons {
+  position: absolute;
+  left: 100px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 2px solid black;
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .dealer {
+    font-size: 10px;
+  }
+}
+
+.prepot-amount {
+  position: absolute;
+  left: 0;
+  bottom: -24px;
+  right: 0;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: greenyellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

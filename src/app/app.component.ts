@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GameService } from './shared/game.service';
 
 @Component({
   selector: 'qp-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'quarantine-poker';
+
+  public constructor(
+    private gameService: GameService,
+  ) {}
+
+  public startGame(): void {
+    this.gameService.startGame();
+  }
 }

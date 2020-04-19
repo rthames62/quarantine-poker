@@ -1,0 +1,24 @@
+<div class="actions">
+  <div class="fold">
+    <button (click)="action('fold')">Fold</button>
+  </div>
+  <ng-container *ngIf="(gameState.callableAction || !mySeat.blindMet); else nonCallableAction">
+    <div class="call">
+      <button (click)="action('call')">
+        Call {{ gameState.betTotal - mySeat.prePotChipAmount }}
+      </button>
+    </div>
+  </ng-container>
+  <ng-template #nonCallableAction>
+    <div class="check">
+      <button (click)="action('check')">Check</button>
+    </div>
+  </ng-template>
+  <div class="raise">
+    <input #raiseAmount type="number" placeholder="Enter raise amount">
+    <button (click)="action('raise', raiseAmount.value)">Raise</button>
+  </div>
+  <div class="all-in">
+    <button (click)="action('all in')">All In</button>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<ng-container *ngIf="gameState">
+  <section class="pot" *ngIf="gameState.potAmount > 0">
+    <p>Pot: {{ gameState.potAmount }}</p>
+  </section>
+
+  <section class="community-cards">
+    <div class="card" *ngFor="let card of gameState.communityCards">
+      <img src="../../assets/cards/{{ card.value }}{{ card.suit }}.jpg">
+    </div>
+  </section>
+</ng-container>

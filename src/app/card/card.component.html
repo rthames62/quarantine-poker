@@ -1,0 +1,14 @@
+<div class="hand-container" [ngClass]="{ me: seat?.me }">
+  <ng-container *ngIf="(seat?.me || gameState?.revealCards); else notMe">
+    <img class="card first"
+    src="../../assets/cards/{{ seat.cards[0].value }}{{ seat.cards[0].suit }}.jpg">
+    <img class="card second"
+    src="../../assets/cards/{{ seat.cards[1].value }}{{ seat.cards[1].suit }}.jpg">
+  </ng-container>
+  <ng-template #notMe>
+    <img class="card first"
+    src="../../assets/cards/Gray_back.jpg">
+    <img class="card second"
+    src="../../assets/cards/Gray_back.jpg">
+  </ng-template>
+</div>
